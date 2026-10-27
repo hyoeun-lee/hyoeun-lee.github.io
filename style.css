@@ -1,0 +1,159 @@
+:root {
+  --bg: #fdfdfb;
+  --text: #22252a;
+  --muted: #5d6470;
+  --rule: #e2e2dc;
+  --accent: #13294b;      /* Illinois navy */
+  --accent-2: #c84b1f;    /* Illinois orange, darkened for contrast */
+  --card: #f4f4ef;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15171b;
+    --text: #e5e6e8;
+    --muted: #a0a6b0;
+    --rule: #2c3038;
+    --accent: #9db8e8;
+    --accent-2: #f08a5d;
+    --card: #1d2026;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+a:hover { border-bottom-color: currentColor; }
+
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+/* ---------- Header / nav ---------- */
+.site-header {
+  border-bottom: 1px solid var(--rule);
+  padding: 18px 0;
+}
+.site-header .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+.site-title {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.site-title:hover { border-bottom-color: transparent; }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 22px; }
+nav a { color: var(--muted); font-size: 0.95rem; }
+nav a:hover, nav a[aria-current="page"] { color: var(--accent); }
+nav a[aria-current="page"] { border-bottom-color: var(--accent-2); }
+
+/* ---------- Main ---------- */
+main.wrap { padding-top: 40px; padding-bottom: 56px; }
+
+h1, h2, h3 { font-family: var(--serif); line-height: 1.25; color: var(--text); }
+h1 { font-size: 2rem; margin: 0 0 4px; font-weight: 600; }
+h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 44px 0 16px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--rule);
+}
+h3 { font-size: 1.05rem; margin: 26px 0 10px; font-weight: 600; }
+main > h2:first-child, section:first-child > h2 { margin-top: 0; }
+
+.lead { color: var(--muted); margin: 0 0 4px; }
+
+/* ---------- Profile (home) ---------- */
+.profile {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 36px;
+  align-items: start;
+}
+.profile img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: var(--card);
+}
+.profile .contact { margin-top: 14px; font-size: 0.95rem; color: var(--muted); line-height: 1.55; }
+.profile .contact a { font-weight: 500; }
+.profile.no-photo { grid-template-columns: 1fr; }
+@media (max-width: 640px) {
+  .profile { grid-template-columns: 1fr; gap: 20px; }
+  .profile img { width: 150px; height: 150px; }
+}
+
+.interests { padding-left: 1.1em; margin: 0; }
+.interests li { margin-bottom: 6px; }
+
+/* ---------- Entry lists (pubs, talks, cv) ---------- */
+.entries { list-style: none; margin: 0; padding: 0; }
+.entries > li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px 20px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--rule);
+}
+.entries > li:last-child { border-bottom: 0; }
+.entries .what { font-weight: 500; }
+.entries .when { color: var(--muted); font-size: 0.92rem; white-space: nowrap; text-align: right; }
+.entries .detail { grid-column: 1 / -1; color: var(--muted); font-size: 0.94rem; }
+@media (max-width: 640px) {
+  .entries > li { grid-template-columns: 1fr; }
+  .entries .when { text-align: left; }
+}
+
+.pubs { margin: 0; padding-left: 1.4em; }
+.pubs li { margin-bottom: 16px; padding-left: 4px; }
+.pubs .title { font-weight: 600; }
+.pubs .authors, .pubs .venue { color: var(--muted); font-size: 0.95rem; }
+.pubs .venue em { color: var(--text); }
+.pubs .links a {
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 0 8px;
+  margin-top: 4px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+}
+.pubs .links a:hover { border-color: var(--accent); }
+
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-weight: 500;
+}
+.button:hover { background: var(--accent); color: var(--bg); border-bottom-color: var(--accent); }
+
+.note { color: var(--muted); font-size: 0.92rem; }
+
+/* ---------- Footer ---------- */
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 20px 0 32px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}

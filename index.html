@@ -1,7 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hyoeun Lee</title>
+  <meta name="description" content="Hyoeun Lee, Clinical Assistant Professor, Department of Statistics, University of Illinois Urbana-Champaign. Research in mathematical finance, limit order books, and stochastic control.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-title" href="index.html">Hyoeun Lee</a>
+      <nav>
+        <ul>
+          <li><a href="index.html" aria-current="page">About</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="cv.html">CV</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="profile">
+      <!-- Add your photo as images/profile.jpg. Until then it stays hidden. -->
+      <img src="images/profile.jpg" alt="Hyoeun Lee"
+           onerror="this.parentElement.classList.add('no-photo'); this.remove();">
+      <div>
+        <h1>Hyoeun Lee</h1>
+        <p class="lead">Clinical Assistant Professor<br>
+          Department of Statistics<br>
+          University of Illinois Urbana-Champaign</p>
+
+        <div class="contact">
+          <a href="mailto:hyoeun@illinois.edu">hyoeun@illinois.edu</a><br>
+          605 E. Springfield Ave., Champaign, IL 61820
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>About</h2>
+      <p>I am a Clinical Assistant Professor in the Department of Statistics at the
+        University of Illinois Urbana-Champaign, where I also serve as an academic
+        advisor for the master's program and mentor undergraduate research projects.</p>
+      <p>My research is in mathematical finance. I work on high-frequency algorithmic
+        trading and market microstructure, with a focus on optimal order placement and
+        execution in limit order books. I model order flow with jump and Hawkes
+        processes and solve the resulting stochastic control problems.</p>
+      <p>I received my Ph.D. in Statistics from Purdue University in 2018, advised by
+        José E. Figueroa-López and
+        Raghu Pasupathy. Before that, I studied mathematics at KAIST.</p>
+    </section>
+
+    <section>
+      <h2>Research Interests</h2>
+      <ul class="interests">
+        <li><strong>Mathematical finance:</strong> high-frequency algorithmic trading,
+          market microstructure, optimal placement in limit order books, order flow
+          modeling with jump processes, stochastic control</li>
+        <li><strong>Stochastic processes and probability</strong></li>
+        <li><strong>Stochastic optimization</strong></li>
+        <li><strong>Time series analysis:</strong> financial time series, machine learning
+          methods for time series</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Hyoeun Lee</div>
+  </footer>
 </body>
 </html>
