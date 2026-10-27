@@ -27,14 +27,29 @@
 
   <main class="wrap">
     <section>
-      <h2>Current Directions</h2>
-      <p>My recent work studies the dynamics of mid-price moves in consolidated US equity quotes
-        with multi-timescale Hawkes models. Building on this, I am working on when to execute an
-        order given real-time forecasts of price direction, and on detecting changes in directional
-        price dynamics as they happen. A second line of work, partly with students, develops online
-        monitoring of covariance structure in high-dimensional financial return panels, with
-        calibrated false-alarm control. I also work with students on forecasting energy prices with
-        statistical and deep learning models.</p>
+      <h2>Research Overview</h2>
+      <p>My recent work studies the joint dynamics of the best bid and ask prices with Hawkes
+        processes. With Kiseop Lee, I developed a spread-gated Hawkes-flocking model of the four
+        types of best-quote moves. Spread-narrowing moves are switched off when the spread is at its
+        one-tick minimum, and a cross-side excitation term, whose activation depends on the
+        prevailing spread, links the two sides of the book. On limit order book data for INTC and
+        MSFT, the model without the cross-side term is rejected, and the full model fits
+        substantially better.
+        As an application, we derive the closed-form optimal size of a limit order placed at the
+        best or second-best quote.</p>
+      <p>In related work, I study how the definition of a price-change event affects Hawkes
+        estimates in the consolidated US quote feed. Hawkes fits to this feed typically find a
+        sub-millisecond kernel component and a branching ratio near criticality. I show that in
+        large-tick stocks the sub-millisecond component comes from how the feed is constructed: half
+        of NBBO changes are locks or depleted quotes that resolve within a millisecond, and the
+        model reads them as excitation. Defining an event as a mid-price level that persists for one
+        millisecond removes the component.</p>
+      <p>Building on these, I am working on when to execute an order given real-time forecasts of
+        price direction, and on detecting changes in directional price dynamics as they happen.
+        A second line of work, partly with students, develops online monitoring of covariance
+        structure in high-dimensional financial return panels, with calibrated false-alarm control.
+        I also work with students on forecasting energy prices with statistical and deep learning
+        models.</p>
     </section>
 
     <section>
