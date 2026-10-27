@@ -43,9 +43,7 @@
         large-tick stocks the sub-millisecond component comes from how the feed is constructed: half
         of NBBO changes are locks or depleted quotes that resolve within a millisecond, and the
         model reads them as excitation. Defining an event as a mid-price level that persists for one
-        millisecond removes the component, and raw fits put three times as much kernel mass within
-        one second as clean fits, which a simulation reproduces. Because the total branching ratio
-        trades off against the baseline, I report kernel mass over a fixed window instead.</p>
+        millisecond removes the component.</p>
       <p>Building on these, I am working on when to execute an order given real-time forecasts of
         price direction, and on detecting changes in directional price dynamics as they happen.
         A second line of work, partly with students, develops online monitoring of covariance
