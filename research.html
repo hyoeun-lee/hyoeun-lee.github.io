@@ -28,13 +28,16 @@
   <main class="wrap">
     <section>
       <h2>Current Directions</h2>
-      <p>My recent work models best bid and ask dynamics with Hawkes processes. With Kiseop Lee,
-        I developed a spread-gated Hawkes-flocking model of the four best-quote moves (bid and ask,
-        up and down), in which the current spread switches cross-side &ldquo;flocking&rdquo; excitation
-        on and off. In limit order book data, the flocking effect shows up as a millisecond snap-back
-        of the spread after it widens, and the model leads to a rule for placing a limit order:
-        at the best or second-best price, and in what quantity. In related work, I study how the definition of a price-change event affects Hawkes
-        estimates of clustering in the consolidated US quote feed.</p>
+      <p>My recent work studies the joint dynamics of the best bid and ask prices with Hawkes
+        processes. With Kiseop Lee, I developed a spread-gated Hawkes-flocking model of the four
+        types of best-quote moves. Spread-narrowing moves are switched off when the spread is at its
+        one-tick minimum, and a cross-side excitation term, whose activation depends on the
+        prevailing spread, links the two sides of the book. On limit order book data for INTC and
+        MSFT, the model without the cross-side term is rejected, and the full model fits
+        substantially better.
+        As an application, we derive the closed-form optimal size of a limit order placed at the
+        best or second-best quote. In related work, I study how the definition of a price-change
+        event affects Hawkes estimates of clustering in the consolidated US quote feed.</p>
       <p>Building on these, I am working on when to execute an order given real-time forecasts of
         price direction, and on detecting changes in directional price dynamics as they happen.
         A second line of work, partly with students, develops online monitoring of covariance
